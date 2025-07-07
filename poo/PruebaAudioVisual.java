@@ -6,12 +6,12 @@ import uni1a.*;     // Necesario para usar la interfaz List
 
 /**
  * Clase principal para probar el sistema de Contenidos Audiovisuales.
- * Demuestra la creación de instancias de las diferentes subclases
+ * Demuestra la creación de instancias de todas las subclases
  * y sus relaciones con Actor, Temporada e Investigador.
  */
 public class PruebaAudioVisual {
     public static void main(String[] args) {
-        System.out.println("¡Hola desde Eclipse y el sistema de Contenidos Audiovisuales ampliado!");
+        System.out.println("¡Hola desde Eclipse y el sistema de Contenidos Audiovisuales completo!");
         System.out.println("-------------------------------------------------------------------\n");
 
         // --- Creación de instancias de las clases de relación (Actor, Temporada, Investigador) ---
@@ -39,7 +39,8 @@ public class PruebaAudioVisual {
 
         // --- Crear instancias de las subclases de ContenidoAudiovisual con sus relaciones ---
 
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3]; // Solo 3 para esta prueba
+        // Array para almacenar todos los contenidos audiovisuales
+        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[5];
 
         // Película con reparto
         contenidos[0] = new Pelicula("Avatar", 162, "Ciencia Ficción", "20th Century Studios", repartoAvatar);
@@ -52,13 +53,19 @@ public class PruebaAudioVisual {
         // Documental con investigadores
         contenidos[2] = new Documental("Cosmos: Una Odisea Espacio-Tiempo", 45, "Ciencia", "Astronomía y Física", investigadoresCosmos);
 
+        // Video Musical
+        contenidos[3] = new VideoMusical("Bohemian Rhapsody", 6, "Rock", "Queen", "A Night at the Opera");
+
+        // Podcast
+        contenidos[4] = new Podcast("La Vida Moderna", 40, "Comedia", "David Broncano", "Cadena SER / Spotify");
+
         // --- Mostrar los detalles de cada contenido audiovisual ---
-        System.out.println("Mostrando detalles de los contenidos audiovisuales:\n");
+        System.out.println("Mostrando detalles de todos los contenidos audiovisuales:\n");
         for (ContenidoAudiovisual contenido : contenidos) {
             contenido.mostrarDetalles();
         }
 
         System.out.println("-------------------------------------------------------------------");
-        System.out.println("Prueba con relaciones Actor, Investigador y Temporada finalizada.");
+        System.out.println("¡El sistema de Contenidos Audiovisuales completo está funcionando!");
     }
 }
